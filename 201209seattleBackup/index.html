@@ -234,6 +234,7 @@ options:
 	         			<section data-state="xgen">
 	         			<h1>Backup Example: Sharded Cluster</h1>
             					<p class="fragment">Stop Balancer (and wait)</p>
+            					<p class="fragment">or no balancing window</p>
             					<p class="fragment">Stop one config server (data R/O)</p>
             					<p class="fragment">Backup Data (shards, config)</p>
             					<p class="fragment">Restart config server</p>
@@ -255,6 +256,16 @@ options:
 	         		<section data-state="xgen">
 	         			<section data-state="xgen">
 	         			<h1>Tips</h1>
+            					<p class="fragment">mongodump/mongoresore</p>
+            					<p class="fragment"> --oplog[Replay]</p>
+            					<p class="fragment"> --objcheck/--repair</p>
+            					<p class="fragment"> --dbpath</p>
+            					<p class="fragment"> --query/--filter</p>
+            					<p class="fragment">bsondump</p>
+            					<p class="fragment">  inspect data at console</p>
+            					<p class="fragment">lvm snapshot time/space trade-off</p>
+            					<p class="fragment"> - Multi ESB backup</p>
+            					<p class="fragment"> - clean up snapshots</p>
 					</section>
 				</section>
 
