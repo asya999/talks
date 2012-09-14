@@ -96,6 +96,17 @@ Ask how many people are running mongo DB.  In production?  How many are doing re
 					</section>
 	         			<section data-state="xgen">
 	         				<h2>Mongodump</h2>
+            				<p><p>
+            					<p class="fragment">Dumps collections to *.bson files</p>
+            					<p class="fragment">Mirrors your structure</p>
+            					<p class="fragment">Can be run in live or offline mode</p>
+            					<p class="fragment">     <em> --dbpath </em> for direct file access</p>
+            					<p class="fragment">     <em> --oplog </em> to dump oplog last PIT</p>
+            					<p class="fragment">     <em> --query/filter </em> selective dump</p>
+            				<p><p>
+					</section>
+	         			<section data-state="xgen">
+	         				<h2>Mongodump</h2>
 						<pre><code contenteditable>$ mongodump --help
 Export MongoDB data to BSON files.
 
@@ -118,16 +129,6 @@ options:
   -q [ --query ] arg      json query
   --oplog                 Use oplog for point-in-time snapshotting
  						</code></pre>
-					</section>
-	         			<section data-state="xgen">
-	         				<h2>Mongodump</h2>
-            				<p><p>
-            					<p class="fragment">Dumps collections to *.bson files</p>
-            					<p class="fragment">Can be run in live or offline mode</p>
-            					<p class="fragment">     <em> --dbpath </em> for direct file access</p>
-            					<p class="fragment">     <em> --oplog </em> to dump oplog last PIT</p>
-            					<p class="fragment">     <em> --query/filter </em> selective dump</p>
-            				<p><p>
 					</section>
 	         			<section data-state="xgen">
             				<p><p>
@@ -183,15 +184,15 @@ options:
 "members" : [
    {
      "_id" : 0,
-     "host" : "Asyas-MacBook-Air.local:27017"
+     "host" : "myhost1.dnsname.com:27017"
    },
    {
      "_id" : 1,
-     "host" : "Asyas-MacBook-Air.local:27018"
+     "host" : "myhost2.dnsname.com:27017"
    },
    {
      "_id" : 2,
-     "host" : "Asyas-MacBook-Air.local:27019"
+     "host" : "myhost3.dnsname.com:27017"
    }
 ] } </code></pre>
 					</section>
@@ -221,6 +222,11 @@ options:
 	         			<section data-state="xgen">
 	         			<h1>Disaster Recovery</h1>
             					<p class="fragment">Recovery (restore) time</p>
+            					<p class="fragment">Replacement </p>
+            					<p class="fragment">   - machine </p>
+            					<p class="fragment">   - component (disk, memory, etc) </p>
+            					<p class="fragment">   - cluster </p>
+            					<p class="fragment">Configuration (reconfiguration)</p>
 					</section>
 				</section>
 
@@ -238,8 +244,11 @@ options:
 	         		<section data-state="xgen">
 	         			<section data-state="xgen">
 	         			<h1>Restore Example: Sharded Cluster</h1>
-            					<p class="fragment">Restart Balancer</p>
-            					<p class="fragment">Restart Balancer</p>
+            					<p class="fragment">Dissimilar #shards to restore to</p>
+            					<p class="fragment">Different shard keys?</p>
+            					<p class="fragment">Selective restores</p>
+            					<p class="fragment">Consolidate shards</p>
+            					<p class="fragment">Changing addresses of config/shards</p>
 					</section>
 				</section>
 
@@ -252,7 +261,8 @@ options:
 				<section data-state="xgen">
 	         			<section data-state="xgen">
 					<h1>Thanks!</h1>
-					<p><a href="http://www.github.com/asya999/seattle2012backup">Code for Presentation</a></p>
+					<p><a href="http://docs.mongodb.org/manual/administration/backups/">Mongo Docs: Backup and Restoration Strategies</a></p>
+					<p><a href="https://github.com/asya999/talks/tree/master/201209seattleBackup">Source Code for Presentation</a></p>
 					</section>
 				</section>
 			</div>
